@@ -6,6 +6,13 @@
   auth_active = TRUE
 )
 
+#' API to set OAuth token for googlesheets4
+#' This API does not refresh provided OAuth token and use it as is.
+#'
+#' @param token - OAuth token for the googlesheets
+#'
+#' @family auth functions
+#' @export
 sheets_set_token <- function(token) {
   .auth$set_cred(token)
   .auth$set_auth_active(TRUE)
