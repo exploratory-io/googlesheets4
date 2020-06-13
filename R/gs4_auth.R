@@ -6,7 +6,16 @@
   auth_active = TRUE
 )
 
-gs4_set_token <- function(token) {
+#' Ste OAuth bring your own token for googlesheets4
+#'
+#' @family auth functions
+#' @export
+#'
+#' @examples
+#'   # load/refresh existing credentials, if available
+#'   # otherwise, go to browser for authentication and authorization
+#'   sheets_set_token(token)
+sheets_set_token <- function(token) {
   .auth$set_cred(token)
   .auth$set_auth_active(TRUE)
   invisible()
