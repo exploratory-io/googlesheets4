@@ -17,33 +17,43 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap -->
 <link href="../tidyverse.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
 
+<!--optional theme-->
+<link href="../.css" rel="stylesheet">
+
+
 
 
 <meta property="og:title" content="Deprecated functions — googlesheets4-deprecated" />
-<meta property="og:description" content="Deprecated functions
-Use sheets_sheet_names() instead of sheets_sheets()." />
+<meta property="og:description" content="
+These functions are deprecated and will be removed in a future release of
+googlesheets4. Since googlesheets4 is a relatively young package, this
+removal will happen rapidly, possibly after just 1 release cycle." />
 <meta property="og:image" content="https://googlesheets4.tidyverse.org/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -71,7 +81,7 @@ Use sheets_sheet_names() instead of sheets_sheets()." />
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -86,15 +96,18 @@ Use sheets_sheet_names() instead of sheets_sheets()." />
 
       <div class="navbar-brand-container">
         <a class="navbar-brand" href="../index.html">googlesheets4</a>
-        <div class="info">
+        <div class="info hidden-xs hidden-sm">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9000</span>
         </div>
       </div>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
+  <a href="../articles/googlesheets4.html">Get started</a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
@@ -105,6 +118,25 @@ Use sheets_sheet_names() instead of sheets_sheets()." />
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
+      <a href="../articles/articles/read-sheets.html">Read Sheets</a>
+    </li>
+    <li>
+      <a href="../articles/articles/write-sheets.html">Write Sheets</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Special topics</li>
+    <li>
+      <a href="../articles/articles/auth.html">googlesheets4 auth</a>
+    </li>
+    <li>
+      <a href="../articles/articles/dates-and-times.html">Dates and times</a>
+    </li>
+    <li>
+      <a href="../articles/articles/find-identify-sheets.html">Find and identify Sheets</a>
+    </li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Connections to other packages</li>
+    <li>
       <a href="../articles/articles/drive-and-sheets.html">Using googlesheets4 with googledrive</a>
     </li>
     <li>
@@ -113,19 +145,31 @@ Use sheets_sheet_names() instead of sheets_sheets()." />
     <li>
       <a href="../articles/articles/googlesheets4-reprex.html">How to create a googlesheets4 reprex</a>
     </li>
+    <li class="divider"></li>
     <li>
-      <a href="../articles/articles/range-specification.html">Range specification</a>
-    </li>
-    <li>
-      <a href="../articles/articles/write-sheets.html">Write Sheets</a>
+      <a href="../articles/index.html">More...</a>
     </li>
   </ul>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    News
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Blog posts</li>
+    <li>
+      <a href="https://www.tidyverse.org/blog/2020/05/googlesheets4-0-2-0/">googlesheets4 0.2.0</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Change log</a>
+    </li>
+  </ul>
 </li>
         <li>
-  <a href="https://github.com/tidyverse/googlesheets4">
+  <a href="https://github.com/tidyverse/googlesheets4/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -149,33 +193,126 @@ Use sheets_sheet_names() instead of sheets_sheets()." />
     </div>
 
     <div class="ref-description">
-    <p>Deprecated functions</p>
-<p>Use <code><a href='sheets_sheet_properties.html'>sheets_sheet_names()</a></code> instead of <code>sheets_sheets()</code>.</p>
+    <p><img src='figures/lifecycle-deprecated.svg' alt='Deprecated lifecycle' /></p>
+<p>These functions are deprecated and will be removed in a future release of
+googlesheets4. Since googlesheets4 is a relatively young package, this
+removal will happen rapidly, possibly after just 1 release cycle.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sheets_sheets</span>(<span class='no'>ss</span>)</pre>
+    <pre class="usage"><span class='fu'>sheets_sheets</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_cells</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_read</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_example</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_examples</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_browse</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_find</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_get</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_auth</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_deauth</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_auth_configure</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_api_key</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_oauth_app</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_token</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_has_token</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_user</span>(<span class='no'>...</span>)
+
+<span class='fu'>sheets_endpoints</span>(<span class='no'>...</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>ss</th>
-      <td><p>Something that identifies a Google Sheet: its file ID, a URL from
-which we can recover the ID, an instance of <code>googlesheets4_spreadsheet</code>
-(returned by <code><a href='sheets_get.html'>sheets_get()</a></code>, or a <code><a href='https://googledrive.tidyverse.org/reference/dribble.html'>dribble</a></code>, which
-is how googledrive represents Drive files. Processed through
-<code><a href='as_sheets_id.html'>as_sheets_id()</a></code>.</p></td>
+      <th>...</th>
+      <td><p>Passed on to the function that succeeds the deprecated function.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="auth-and-api-endpoints"><a class="anchor" href="#auth-and-api-endpoints"></a>Auth and API endpoints</h2>
+
+    
+<table class='table'>
+<tr><td><strong>&lt; v0.2.0</strong></td><td><strong>&gt;= v0.2.0</strong></td></tr>
+<tr><td>sheets_api_key()</td><td>gs4_api_key()</td></tr>
+<tr><td>sheets_auth()</td><td>gs4_auth()</td></tr>
+<tr><td>sheets_auth_configure()</td><td>gs4_auth_configure()</td></tr>
+<tr><td>sheets_deauth()</td><td>gs4_deauth()</td></tr>
+<tr><td>sheets_endpoints()</td><td>gs4_endpoints()</td></tr>
+<tr><td>sheets_has_token()</td><td>gs4_has_token()</td></tr>
+<tr><td>sheets_oauth_app()</td><td>gs4_oauth_app()</td></tr>
+<tr><td>sheets_token()</td><td>gs4_token()</td></tr>
+<tr><td>sheets_user()</td><td>gs4_user()</td></tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="hasAnchor" id="spreadsheet-operations"><a class="anchor" href="#spreadsheet-operations"></a>Spreadsheet operations</h2>
+
+    
+<table class='table'>
+<tr><td><strong>&lt; v0.2.0</strong></td><td><strong>&gt;= v0.2.0</strong></td></tr>
+<tr><td>sheets_browse()</td><td>gs4_browse()</td></tr>
+<tr><td>sheets_find()</td><td>gs4_find()</td></tr>
+<tr><td>sheets_example()</td><td>gs4_example()</td></tr>
+<tr><td>sheets_examples()</td><td>gs4_examples()</td></tr>
+<tr><td>sheets_get()</td><td>gs4_get()</td></tr>
+</table>
+
+
+    <h2 class="hasAnchor" id="-work-sheet-operations"><a class="anchor" href="#-work-sheet-operations"></a>(Work)sheet operations</h2>
+
+    
+<table class='table'>
+<tr><td><strong>&lt; v0.2.0</strong></td><td><strong>&gt;= v0.2.0</strong></td></tr>
+<tr><td>sheets_sheets()</td><td>sheet_names()</td></tr>
+</table>
+
+
+    <h2 class="hasAnchor" id="range-operations"><a class="anchor" href="#range-operations"></a>Range operations</h2>
+
+    
+<table class='table'>
+<tr><td><strong>&lt; v0.2.0</strong></td><td><strong>&gt;= v0.2.0</strong></td></tr>
+<tr><td>sheets_cells()</td><td>range_read_cells()</td></tr>
+<tr><td>sheets_read()</td><td>range_read()</td></tr>
+</table>
+
+
 
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 

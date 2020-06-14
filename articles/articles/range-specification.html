@@ -12,13 +12,15 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="../../tidyverse.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="../../tidyverse.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../../bootstrap-toc.css">
+<script src="../../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../../pkgdown.css" rel="stylesheet">
 <script src="../../pkgdown.js"></script><link href="../../tidyverse-2.css" rel="stylesheet">
+<!--optional theme--><link href="../../.css" rel="stylesheet">
 <meta property="og:title" content="Range specification">
-<meta property="og:description" content="">
+<meta property="og:description" content="googlesheets4">
 <meta property="og:image" content="https://googlesheets4.tidyverse.org/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -32,7 +34,7 @@
   gtag('config', 'UA-115082821-1');
 </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -46,14 +48,17 @@
 
       <div class="navbar-brand-container">
         <a class="navbar-brand" href="../../index.html">googlesheets4</a>
-        <div class="info">
+        <div class="info hidden-xs hidden-sm">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9000</span>
         </div>
       </div>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="../../articles/googlesheets4.html">Get started</a>
+</li>
 <li>
   <a href="../../reference/index.html">Reference</a>
 </li>
@@ -65,6 +70,25 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
+      <a href="../../articles/articles/read-sheets.html">Read Sheets</a>
+    </li>
+    <li>
+      <a href="../../articles/articles/write-sheets.html">Write Sheets</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">Special topics</li>
+    <li>
+      <a href="../../articles/articles/auth.html">googlesheets4 auth</a>
+    </li>
+    <li>
+      <a href="../../articles/articles/dates-and-times.html">Dates and times</a>
+    </li>
+    <li>
+      <a href="../../articles/articles/find-identify-sheets.html">Find and identify Sheets</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">Connections to other packages</li>
+    <li>
       <a href="../../articles/articles/drive-and-sheets.html">Using googlesheets4 with googledrive</a>
     </li>
     <li>
@@ -73,19 +97,31 @@
     <li>
       <a href="../../articles/articles/googlesheets4-reprex.html">How to create a googlesheets4 reprex</a>
     </li>
+    <li class="divider">
     <li>
-      <a href="../../articles/articles/range-specification.html">Range specification</a>
-    </li>
-    <li>
-      <a href="../../articles/articles/write-sheets.html">Write Sheets</a>
+      <a href="../../articles/index.html">More...</a>
     </li>
   </ul>
 </li>
-<li>
-  <a href="../../news/index.html">Changelog</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    News
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li class="dropdown-header">Blog posts</li>
+    <li>
+      <a href="https://www.tidyverse.org/blog/2020/05/googlesheets4-0-2-0/">googlesheets4 0.2.0</a>
+    </li>
+    <li class="divider">
+    <li>
+      <a href="../../news/index.html">Change log</a>
+    </li>
+  </ul>
 </li>
         <li>
-  <a href="https://github.com/tidyverse/googlesheets4">
+  <a href="https://github.com/tidyverse/googlesheets4/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -103,7 +139,7 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Range specification</h1>
+      <h1 data-toc-skip>Range specification</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/tidyverse/googlesheets4/blob/master/vignettes/articles/range-specification.Rmd"><code>vignettes/articles/range-specification.Rmd</code></a></small>
@@ -114,14 +150,14 @@
     
     
 <p>This is article serves mostly as internal documentation of how various representations of cell ranges relate to each other in googlesheets4.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(googlesheets4)</span>
-<span id="cb1-3"><a href="#cb1-3"></a></span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="kw"><a href="../../reference/sheets_deauth.html">sheets_deauth</a></span>()</span></code></pre></div>
+<div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">tidyverse</span>)
+<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">googlesheets4</span>)
+
+<span class="fu"><a href="../../reference/gs4_deauth.html">gs4_deauth</a></span>()</pre></body></html></div>
 <div id="user-specified-range" class="section level1">
 <h1 class="hasAnchor">
 <a href="#user-specified-range" class="anchor"></a>User-specified range</h1>
-<p>Several googlesheets4 functions allow the user to specify which cells to read or write. This range specification comes via the <code>sheet</code>, <code>range</code>, and (possibly) <code>skip</code> arguments. Examples of functions with this interface: <code><a href="../../reference/read_sheet.html">sheets_read()</a></code>, <code><a href="../../reference/sheets_cells.html">sheets_cells()</a></code>, and <code><a href="../../reference/sheets_edit.html">sheets_edit()</a></code>.</p>
+<p>Several googlesheets4 functions allow the user to specify which cells to read or write. This range specification comes via the <code>sheet</code>, <code>range</code>, and (possibly) <code>skip</code> arguments. Examples of functions with this interface: <code><a href="../../reference/range_read.html">range_read()</a></code>, <code><a href="../../reference/range_read_cells.html">range_read_cells()</a></code>, and <code><a href="../../reference/range_write.html">range_write()</a></code>.</p>
 <ul>
 <li>
 <code>range</code> is the primary and most powerful argument and takes precedence over all others. <code>range</code> can be:
@@ -135,7 +171,7 @@
 <li>
 <code>sheet</code> can be used to specify a (work)sheet by name, such as “arts”, or by position, such as 3</li>
 <li>
-<code>skip</code> is an optional argument that appears in <code><a href="../../reference/read_sheet.html">sheets_read()</a></code> and <code><a href="../../reference/sheets_cells.html">sheets_cells()</a></code>, to be compatible with functions like <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code>, <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_delim()</a></code>, and <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code>.</li>
+<code>skip</code> is an optional argument that appears in <code><a href="../../reference/range_read.html">range_read()</a></code> and <code><a href="../../reference/range_read_cells.html">range_read_cells()</a></code>, to be compatible with functions like <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code>, <code><a href="https://readr.tidyverse.org/reference/read_delim.html">readr::read_delim()</a></code>, and <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">readxl::read_excel()</a></code>.</li>
 </ul>
 <p>(You might think <code>n_max</code> should also be mentioned here, but for technical reasons, in general, <code>n_max</code> can only be enforced after we’ve read data. So it’s not part of the range ingest problem.)</p>
 <p>Loose ends and hangnails:</p>
@@ -144,7 +180,7 @@
 <li>The problem of a completely unspecified range. In a very hand-wavy sense, “no range” means “all cells” or “all non-empty cells” or “all non-empty cells in the first (visible?) sheet”. That is obviously very imprecise, which means that I have to think about how to handle “no range” for each individual endpoint or function. Sometimes I inject some info (such as the first visible worksheet), so we don’t retrieve data that we will just throw away. This is all very special case-y right now.</li>
 <li>
 <code>cell_limits</code> objects can hold sheet information and I have made no arrangements for that.</li>
-<li>Should <code><a href="../../reference/sheets_edit.html">sheets_edit()</a></code> have a skip argument, just for internal consistency?</li>
+<li>Should <code><a href="../../reference/range_write.html">range_write()</a></code> have a skip argument, just for internal consistency?</li>
 </ul>
 </div>
 <div id="range-spec" class="section level1">
@@ -284,7 +320,7 @@
 <h3 class="hasAnchor">
 <a href="#a1-range-from-cell_limits" class="anchor"></a>A1 range from <code>cell_limits</code>
 </h3>
-<p>The reading functions <code><a href="../../reference/read_sheet.html">sheets_read()</a></code> and <code><a href="../../reference/sheets_cells.html">sheets_cells()</a></code> hit the <code>sheets.spreadsheets.get</code> endpoint. Bizarrely, this endpoint requires the range to be specified in A1-notation. If the user specifies the cell rectangle in A1-notation, things are easy and we essentially just pass that along. But users can describe certain partially open cell rectangles via <code>cell_limits</code> that can’t be literally expressed in A1-notation. The table below shows how all possible combinations of row and cell limits are translated into an A1-style range, using technical limits on the number of rows and columns in a Google Sheet.</p>
+<p>The reading functions <code><a href="../../reference/range_read.html">range_read()</a></code> and <code><a href="../../reference/range_read_cells.html">range_read_cells()</a></code> hit the <code>sheets.spreadsheets.get</code> endpoint. Bizarrely, this endpoint requires the range to be specified in A1-notation. If the user specifies the cell rectangle in A1-notation, things are easy and we essentially just pass that along. But users can describe certain partially open cell rectangles via <code>cell_limits</code> that can’t be literally expressed in A1-notation. The table below shows how all possible combinations of row and cell limits are translated into an A1-style range, using technical limits on the number of rows and columns in a Google Sheet.</p>
 <table class="table">
 <thead><tr class="header">
 <th align="right">start_col</th>
@@ -464,7 +500,7 @@
 <p>If the <code>RowData</code> doesn’t cover the entire <code>range</code> rectangle, the targetted cells that don’t receive new data are cleared, according to the accompanying field mask in <code>fields</code>.</p>
 </li>
 </ul>
-<p><code><a href="../../reference/sheets_edit.html">sheets_edit()</a></code> is the only writing function in googlesheets4 that lets the user target a specific range. This function is why we need the ability to convert A1-notation to <code>cell_limits</code> and to decide whether user’s range should be sent via <code>start</code> or <code>range</code>. <code><a href="../../reference/write_sheet.html">sheets_write()</a></code>, <code><a href="../../reference/sheets_create.html">sheets_create()</a></code>, and <code><a href="../../reference/sheets_append.html">sheets_append()</a></code> all offer a higher-level API, focused on the holistic management of (work)sheets that hold a single data table.</p>
+<p><code><a href="../../reference/range_write.html">range_write()</a></code> is the only writing function in googlesheets4 that lets the user target a specific range. This function is why we need the ability to convert A1-notation to <code>cell_limits</code> and to decide whether user’s range should be sent via <code>start</code> or <code>range</code>. <code><a href="../../reference/gs4_create.html">gs4_create()</a></code>, <code><a href="../../reference/sheet_write.html">sheet_write()</a></code>, and <code><a href="../../reference/sheet_append.html">sheet_append()</a></code> all offer a higher-level API, focused on the holistic management of (work)sheets that hold a single data table.</p>
 <p>Here’s a table that translates the A1-style ranges created above into <code>cell_limits</code>. Some scenarios are covered more than once in this input, because above we were tackling a different (harder) problem. But that’s harmless and these inputs are good, in terms of covering all relevant scenarios. Note I dropped the row corresponding to “no input”.</p>
 <table class="table">
 <thead><tr class="header">
@@ -534,18 +570,18 @@
 </tr>
 </tbody>
 </table>
-<p>How to decide whether to send user’s range via <code>start</code> or <code>range</code>? Possible scenarios for <code>(sheet, range)</code> (remember: so far, <code><a href="../../reference/sheets_edit.html">sheets_edit()</a></code> doesn’t offer <code>skip</code>):</p>
+<p>How to decide whether to send user’s range via <code>start</code> or <code>range</code>? Possible scenarios for <code>(sheet, range)</code> (remember: so far, <code><a href="../../reference/range_write.html">range_write()</a></code> doesn’t offer <code>skip</code>):</p>
 <ul>
 <li>
 <code>sheet</code> not given: populate with first (visible) sheet.</li>
-<li>No <code>range</code>: Send sheet ID as <code>GridCoordinate</code> via <code>start</code>. We will overwrite data (and usually formats) in cells covered by the accompanying <code>data</code>. But we don’t touch the rest of the sheet. Why not send as <code>range</code>? That feels too aggressive because it clears the data (and usually formats) of any cells in the sheet that are not covered by the <code>data</code>. But if user wants that, there’s always <code><a href="../../reference/write_sheet.html">sheets_write()</a></code>.</li>
+<li>No <code>range</code>: Send sheet ID as <code>GridCoordinate</code> via <code>start</code>. We will overwrite data (and usually formats) in cells covered by the accompanying <code>data</code>. But we don’t touch the rest of the sheet. Why not send as <code>range</code>? That feels too aggressive because it clears the data (and usually formats) of any cells in the sheet that are not covered by the <code>data</code>. But if user wants that, there’s always <code><a href="../../reference/range_write.html">range_write()</a></code>.</li>
 <li>
 <code>range</code> as A1 notation: Re-express it as <code>cell_limits</code>.</li>
 <li>
 <code>range</code> as <code>cell_limits</code> breaks down into a couple scenarios:
 <ul>
 <li>
-<code>cell_limits</code> contains at least 1 <code>NA</code>: send as <code>GridRange</code> via <code>range</code>. Analysis of the “all <code>NA</code>” edge case: we send just the sheet ID as a <code>GridRange</code>, so we will clear the targeted fields for the whole sheet. This seems OK here, because no one can do this by accident, i.e. you have to go out of your way to make an explicit <code>cell_limits</code> object containing only <code>NA</code>s. Why would you do this instead of <code><a href="../../reference/write_sheet.html">sheets_write()</a></code>? Maybe you need to suppress the inclusion of <code>col_names</code> or you don’t like the table formatting applied by <code><a href="../../reference/write_sheet.html">sheets_write()</a></code>.</li>
+<code>cell_limits</code> contains at least 1 <code>NA</code>: send as <code>GridRange</code> via <code>range</code>. Analysis of the “all <code>NA</code>” edge case: we send just the sheet ID as a <code>GridRange</code>, so we will clear the targeted fields for the whole sheet. This seems OK here, because no one can do this by accident, i.e. you have to go out of your way to make an explicit <code>cell_limits</code> object containing only <code>NA</code>s. Why would you do this instead of <code><a href="../../reference/range_write.html">range_write()</a></code>? Maybe you need to suppress the inclusion of <code>col_names</code> or you don’t like the table formatting applied by <code><a href="../../reference/range_write.html">range_write()</a></code>.</li>
 <li>
 <code>cell_limits</code> has no <code>NA</code>s: If rectangle includes more than 1 cell, send as <code>GridRange</code> via <code>range</code>. If rectangle is exactly 1 cell, send as <code>GridCoordinate</code> via <code>start</code>.</li>
 </ul>
@@ -556,21 +592,11 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#user-specified-range">User-specified range</a></li>
-      <li>
-<a href="#range-spec">Range spec</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#cell-rectangles">Cell rectangles</a></li>
-      </ul>
-</li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
