@@ -1,6 +1,6 @@
 pandoc: 2.7.3
 pkgdown: 1.6.1.9000
-pkgdown_sha: cc9c7b1be8573f8af3453f6e5d0422d86c916701
+pkgdown_sha: e1e46f2e13c7efdb17bc4eae40bc3779c2b0b517
 articles:
   articles/auth: auth.html
   articles/dates-and-times: dates-and-times.html
@@ -14,7 +14,7 @@ articles:
   articles/read-sheets: read-sheets.html
   articles/write-sheets: write-sheets.html
   googlesheets4: googlesheets4.html
-last_built: 2020-09-21T12:14Z
+last_built: 2020-09-22T12:15Z
 urls:
   reference: https://googlesheets4.tidyverse.org/reference
   article: https://googlesheets4.tidyverse.org/articles
